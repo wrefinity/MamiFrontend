@@ -6,10 +6,11 @@
     @include flexSpaceBetween(column);
     align-items: center;
     padding: 6rem;
-    color: $mami-green;
+    color: $pryClr;
 
     h1{
         font-size: large;
         font-weight: weight(regular);
     }
+
 }

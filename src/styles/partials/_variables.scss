@@ -1,8 +1,8 @@
-$mami-green: #305C45;
+$pryClr: #305C45;
+$secClr: #E6A960;
 $mami-black: #313638;
 $mami-hover-bold: #1D3729;
 $mami-background: #F4FAF7;
-$mami-orange: #E6A960;
 $secondary-background: #F1F1F1;
 $text-black: #000000;
 $font-weights: (
@@ -13,6 +13,7 @@ $font-weights: (
 
 :export {
     // Export variables for JS
-    mamiGreen: $mami-green;
+    pryClr: $pryClr;
+    secClr: $secClr;
     mamiBlack: $mami-black;
 }
