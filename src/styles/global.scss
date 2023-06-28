@@ -1,0 +1,10 @@
+@import "./partials/_variables";
+@import "./partials/_functions";
+@import "./partials/_mixins";
+
+.sidebar{
+    background: $mami-black;
+    padding: 3rem;
+    color: $secClr;
+    height: 100vh;
+}
