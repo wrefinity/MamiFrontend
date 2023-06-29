@@ -1,4 +1,7 @@
+@import "./partials/reset";
 @import "./partials/_variables";
+@import "./partials/utilities";
+
 @import "./partials/_functions";
 @import "./partials/_mixins";
 
@@ -7,4 +10,9 @@
     padding: 3rem;
     color: $secClr;
     height: 100vh;
+}
+
+
+.border-it{
+    border: 2px solid red
 }

@@ -1,0 +1,118 @@
+@use 'sass:math';
+@import './variables';
+
+/* values */
+$font-sizes: (
+  "12": 0.75rem,   /* 9, 10 */ /**/
+  "16": 1rem,
+  "18": 1.125rem,
+  "24": 1.5rem,
+  "28": 1.75rem,
+);
+$spacings: (
+  "8": 0.5rem,
+  "16": 1rem,
+  "20": 1.25rem, /* 4 gutters */
+  "24": 1.5rem,
+  "26": 1.625rem,
+  "28": 1.75rem,
+  "32": 2rem,
+  "38": 2.375rem,
+
+  "110": 6.875rem, /* 4 margin */
+);
+
+$utilities: (
+  "padding": (
+    "prefix": "m-p",
+    "values": $spacings,
+  ),
+  "padding-left": (
+    "prefix": "m-pl",
+    "values": $spacings,
+  ),
+  "padding-right": (
+    "prefix": "m-pr",
+    "values": $spacings,
+  ),
+  "padding-top": (
+    "prefix": "m-pt",
+    "values": $spacings,
+  ),
+  "padding-bottom": (
+    "prefix": "m-pb",
+    "values": $spacings,
+  ),
+  "padding-inline": (
+    "prefix": "m-px",
+    "values": $spacings,
+  ),
+  "padding-block": (
+    "prefix": "m-py",
+    "values": $spacings,
+  ),
+
+
+  "margin": (
+    "prefix": "m-m",
+    "values": $spacings,
+  ),
+  "margin-left": (
+    "prefix": "m-ml",
+    "values": $spacings,
+  ),
+  "margin-right": (
+    "prefix": "m-mr",
+    "values": $spacings,
+  ),
+  "margin-top": (
+    "prefix": "m-mt",
+    "values": $spacings,
+  ),
+  "margin-bottom": (
+    "prefix": "m-mb",
+    "values": $spacings,
+  ),
+  "margin-inline": (
+    "prefix": "m-mx",
+    "values": $spacings,
+  ),
+  "margin-block": (
+    "prefix": "m-my",
+    "values": $spacings,
+  ),
+
+
+  "gap": (
+    "prefix": "m-gap",
+    "values": $spacings,
+  ),
+  "row-gap": (
+    "prefix": "m-gap-x",
+    "values": $spacings,
+  ),
+  "column-gap": (
+    "prefix": "m-gap-y",
+    "values": $spacings,
+  ),
+);
+
+/* gen classes */
+@each $property, $map in $utilities {
+  $prefix: map-get($map, "prefix" );
+  $values: map-get($map, "values" );
+
+  @each $k, $v in $values {
+    @if ($k == "default") {
+      .#{$prefix} {
+        #{$property}: $v;
+      }
+    }
+    @else {
+      .#{$prefix}-#{$k} {
+        #{$property}: $v
+      }
+    }
+
+  }
+};
