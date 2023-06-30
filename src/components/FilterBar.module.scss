@@ -1,0 +1,14 @@
+@import '../styles/partials/variables';
+@import '../styles/partials/mixins';
+
+.search-bar{
+
+  // $pryClr
+  & > div {
+    max-width: 90%;
+    margin-inline: auto;
+
+    @include flexAlign()
+
+  }
+}

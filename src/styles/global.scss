@@ -1,6 +1,6 @@
-@import "./partials/reset";
+@import "./partials/_reset";
 @import "./partials/_variables";
-@import "./partials/utilities";
+// @import "./partials/utilities";
 
 @import "./partials/_functions";
 @import "./partials/_mixins";
@@ -12,7 +12,27 @@
     height: 100vh;
 }
 
+.rounded-8 {
+    border-radius: 8px;
+}
 
+.w-100{
+    width: 100%;
+}
+.w-50{
+    width: 50%;
+}
+.w-120{
+    width: 120px;
+}
+
+// dev-classes
 .border-it{
     border: 2px solid red
+}
+.border-itt{
+    border: 4px solid green
+}
+.outline-it{
+    outline: 2px solid red
 }
