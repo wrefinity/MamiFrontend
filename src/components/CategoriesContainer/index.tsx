@@ -14,7 +14,7 @@ function TopCategories({cardTitle} : {cardTitle: string}) {
     <div className='container'>
         <div className="cardHead">
             <h3>{cardTitle}</h3>
-            <p>See all</p>
+            <p>See all &#8250;</p>
         </div>
         <div className="categories">
             {categories.map((category, index) => {

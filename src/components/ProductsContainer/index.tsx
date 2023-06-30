@@ -16,7 +16,7 @@ function ProductsContainer({cardTitle, newArrivals} : {cardTitle: string, newArr
     <div className='container'>
       <div className="cardHead">
         <h3>{cardTitle}</h3>
-        <p>See all</p>
+        <p>See all &#8250;</p>
       </div>
       <div className="products">
         {products.map((product, index) => {

@@ -18,7 +18,7 @@ function FlashSalesContainer({cardTitle} : {cardTitle: string}) {
             <div className="cardHead">
                 <h2>{cardTitle}</h2>
                 <h3>03h:15m:5s left</h3>
-                <p>See all</p>
+                <p>See all &#8250;</p>
             </div>
             <div className="products">
                 {products.map((product, index) => {
