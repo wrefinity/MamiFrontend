@@ -1,0 +1,73 @@
+@import "@/styles/partials/variables";
+@import "@/styles/partials/functions";
+@import "@/styles/partials/mixins";
+
+.coloredContainer{
+    background: linear-gradient(#E6A960, #5F9261, #FFE86E, #9747FF);
+    padding: 2px;
+    border-radius: 10px;
+
+
+    .container {
+        background: $white;
+        border-radius: 8px;
+        overflow: hidden;
+        padding-bottom: 2rem;
+    
+        .cardHead {
+            border-bottom: 0.6px solid #939393;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            align-items: center;
+    
+            h2 {
+                color: $mami-black;
+                font-weight: weight(medium);
+                font-size: 1.5rem;
+                background: linear-gradient(#EE2929, #3F903A);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+
+                @include mobile(){
+                    font-size: .8rem;
+                }
+            }
+
+            h3{
+                font-size: 1.4rem;
+                font-weight: weight(medium);
+
+                @include mobile(){
+                    font-size: .8rem;
+                }
+            }
+
+            p{
+                min-width: 3rem;
+            }
+
+            @include mobile(){
+                padding: 1rem;
+                margin-bottom: 0;
+                gap: 2rem;
+                background: $secondary-background;
+            }
+        }
+    
+        .products {
+            padding: 1rem 0 1rem 2rem;
+            @include flexScrollX;
+            @include mobile(){
+                padding: 1rem 0 1rem 1rem;
+            }
+        }
+
+        @include mobile{
+            padding-bottom: 0 !important;
+        }
+    }
+
+}
