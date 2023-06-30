@@ -27,6 +27,10 @@
     display: flex;
     gap: 2rem;
     justify-content: space-between;
+
+    @include mobile(){
+        gap: .6rem;
+    }
 }
 
 @mixin nextImageContainer{
