@@ -1,0 +1,20 @@
+@import '../styles/partials/variables';
+@import '../styles/partials/mixins';
+
+.navbar{
+
+  // $pryClr
+  // $mami-black
+  & > div {
+    max-width: 90%;
+    margin-inline: auto;
+    color: $mami-black;
+
+    @include flexAlign(initial, space-between, initial)
+
+  }
+}
+.all-categories{
+  display: flex;
+  gap: map-get($spacings, "10");
+}

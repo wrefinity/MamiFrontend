@@ -7,8 +7,97 @@
   & > div {
     max-width: 90%;
     margin-inline: auto;
+    // line-height: 1px;
 
-    @include flexAlign()
+    @include flexAlign(initial, space-between, center);
 
+    // background-color: red;
+  
+    @include mobile {
+      background-color: red;
+    }
+
+  }
+
+  & img {
+    width: 100%;
+  }
+
+  .filter-nav {
+    @include flexAlign();
+    gap: map-get($spacings, '18' );
+
+    font-size: map-get($font-sizes, '18' );
+
+    img {
+      width: 100%;
+    }
+    > * {
+      gap: map-get($spacings, '10');
+    }
+    > button{
+      @include flexAlign(initial, initial, center);
+
+      > div {
+        width: 18px;
+      }
+    }
+    > a{
+      @include flexAlign(initial, initial, center);
+      > div{
+        width: 13px;
+      }
+    }
+    > a:nth-of-type(2) > div{
+      width: 16px;
+    }
+  }
+
+
+  .search-container {
+
+    input{
+      background-color: $secondary-background;
+    }
+    button{
+      background-color: $pryClr;
+    }
+  }
+
+
+}
+
+.logo{
+  flex-basis: 14%;
+}
+.sell{
+  flex-basis: 60%;
+  
+  @include flexAlign(initial, space-between, center);
+}
+.search-container{
+  flex-basis: 80%;
+  @include flexAlign(initial, initial, center);
+  border-radius: map-get($radius, '6');
+  border: 1.4px solid $mami-gray;
+  
+
+  input{
+    flex-basis: 100%;
+    border: 1px solid $mami-gray;
+    padding: 0.55rem 14px;
+    border-top-left-radius: map-get($radius, '6');
+    border-bottom-left-radius: map-get($radius, '6');
+
+    outline: none;
+    font-size: map-get($font-sizes, '18');
+    // line-height: 1.3rem;
+    line-height: 0;
+
+  }
+  button{
+    padding: 0.4rem 1.4rem;
+    border-top-right-radius: map-get($radius, '6');
+    border-bottom-right-radius: map-get($radius, '6');
   }
 }
