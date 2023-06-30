@@ -1,0 +1,94 @@
+@import "@/styles/partials/variables";
+@import "@/styles/partials/functions";
+@import "@/styles/partials/mixins";
+
+.container{
+    background: $white;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    position: relative;
+
+    .cardHead{
+        border-bottom: 0.6px solid #939393;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        
+        h3{
+            color: $mami-black;
+            font-weight: weight(medium);
+        }
+        
+        @include mobile(){
+            margin-bottom: 0 !important;
+            padding: 1rem !important;
+            background: $secondary-background;
+        }
+    }
+
+    .products{
+        padding: 1rem 0 1rem 2rem;
+        @include flexScrollX;
+
+        .product{
+            min-width: 11rem;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: $mami-background;
+            
+            .productImageContainer{
+                @include nextImageContainer;
+                width: 100%;
+                aspect-ratio: 1/1;
+            }
+            
+            .productDetails{
+                padding: 1rem;
+
+                h3{
+                    font-weight: weight(medium);
+
+                    @include mobile{
+                        font-size: 1rem;
+                    }
+                }
+
+                h4{
+                    @include mobile{
+                        font-size: .7rem;
+                    }
+                }
+
+                @include mobile{
+                    padding: 1rem;
+                }
+            }
+
+            @include mobile{
+                min-width: 8rem;
+            }
+        }
+
+        @include mobile{
+            padding: .4rem;
+        }
+    }
+
+    .newTag{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 1rem;
+        background: red;
+        color: $white;
+        font-size: .6rem;
+        border-bottom-left-radius: 8px;
+    }
+
+    @include mobile{
+        padding-bottom: 0 !important;
+    }
+}
+
