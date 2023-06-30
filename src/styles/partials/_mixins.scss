@@ -9,17 +9,39 @@
 
 @mixin flexScrollX{
     display: flex;
-    gap: 33px;
+    gap: 2rem;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+        display: none
+    }
+
+    @include mobile(){
+        gap: 1rem
+    }
 };
 
+@mixin flexGap2{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+@mixin nextImageContainer{
+    position: relative;
+    overflow: hidden;
+}
+
 @mixin tablet{
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         @content
     }
 };
 
 @mixin mobile{
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 500px) {
         @content
     }
 }

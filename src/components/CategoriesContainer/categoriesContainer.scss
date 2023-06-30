@@ -1,0 +1,81 @@
+@import "@/styles/partials/variables";
+@import "@/styles/partials/functions";
+@import "@/styles/partials/mixins";
+
+.container{
+    background: $white;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 2rem;
+
+    .cardHead{
+        border-bottom: 0.6px solid #939393;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        h3{
+            color: $mami-black;
+            font-weight: weight(medium);
+        }
+
+        @include mobile{
+            padding: 1rem !important;
+            background: $secondary-background;
+        }
+    }
+
+    .categories{
+        padding: 1rem 0 1rem 2rem;
+        margin-right: 2rem;
+        @include flexGap2;
+
+        .category{
+            width: 15rem;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: $mami-background;
+            
+            .categoryImageContainer{
+                @include nextImageContainer;
+                width: 100%;
+                aspect-ratio: 16/12;
+            }
+            
+            .categoryDetails{
+                padding: 1rem;
+
+                h3{
+                    font-weight: weight(medium);
+                }
+
+                h4{
+                    font-size: .7rem;
+                }
+
+                button{
+                    font-size: .9rem;
+                    font-weight: weight(medium);
+                }
+            }
+
+            @include tablet{
+                min-width: 13rem;
+            }
+
+            @include mobile{
+                min-width: 10rem;
+            }
+        }
+
+        @include tablet{
+            overflow-x: scroll;
+        }
+
+        @include mobile{
+            padding: 1rem !important;
+        }
+    }
+}
+

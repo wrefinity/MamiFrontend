@@ -1,18 +1,22 @@
 @import "./partials/reset";
-@import "./partials/_variables";
+@import "./partials/variables";
 @import "./partials/utilities";
 
-@import "./partials/_functions";
-@import "./partials/_mixins";
+@import "./partials/functions";
+@import "./partials/mixins";
 
-.sidebar{
-    background: $mami-black;
-    padding: 3rem;
-    color: $secClr;
-    height: 100vh;
+
+body{
+    background: $mami-background;
 }
 
+// Generic ClassNames
 
-.border-it{
-    border: 2px solid red
+
+.responsiveSection-m{
+    margin: 26px 110px;
+    @include tablet {
+        margin: 28px;
+    }
 }
+

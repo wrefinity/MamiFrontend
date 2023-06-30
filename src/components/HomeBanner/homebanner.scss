@@ -1,0 +1,50 @@
+@import "@/styles/partials/variables";
+@import "@/styles/partials/functions";
+@import "@/styles/partials/mixins";
+
+.homeBanner {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    gap: 2rem;
+    margin: 2px;
+    text-align: center;
+
+    .carousel {
+        background: $pryClr;
+        color: $white;
+        border-radius: 8px;
+        padding: 1rem;
+
+        h1{
+            color: #FFF;
+            font-size: 50px;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 77px;
+            text-transform: capitalize;
+        }
+    }
+
+    .sideImages{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+        .sideImageContainer{
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1/1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        @include tablet{
+            display: none;
+        }
+    }
+
+    @include tablet{
+        display: block;
+    }
+}
