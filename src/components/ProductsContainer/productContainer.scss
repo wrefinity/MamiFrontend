@@ -60,6 +60,10 @@
                         font-size: .7rem;
                     }
                 }
+
+                @include mobile{
+                    padding: 1rem;
+                }
             }
 
             @include mobile{
@@ -68,7 +72,7 @@
         }
 
         @include mobile{
-            padding-left: 1rem;
+            padding: .4rem;
         }
     }
 
