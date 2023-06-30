@@ -8,6 +8,10 @@
 
 body{
     background: $mami-background;
+
+    @include mobile{
+        background: $white;
+    }
 }
 
 // Generic ClassNames
@@ -17,6 +21,10 @@ body{
     margin: 26px 110px;
     @include tablet {
         margin: 28px;
+    }
+
+    @include mobile{
+        margin: .8rem;
     }
 }
 

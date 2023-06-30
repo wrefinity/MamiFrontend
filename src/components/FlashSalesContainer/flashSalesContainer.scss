@@ -61,13 +61,17 @@
             padding: 1rem 0 1rem 2rem;
             @include flexScrollX;
             @include mobile(){
-                padding: 1rem 0 1rem 1rem;
+                padding: 1rem 0 1rem .7rem !important;
             }
         }
 
         @include mobile{
             padding-bottom: 0 !important;
         }
+    }
+
+    @include mobile{
+        background: $white;
     }
 
 }
