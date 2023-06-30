@@ -18,5 +18,9 @@ body{
     @include tablet {
         margin: 28px;
     }
+
+    @include mobile{
+        margin: .8rem;
+    }
 }
 
