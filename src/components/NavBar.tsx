@@ -3,7 +3,7 @@ import React from 'react'
 import style from './NavBar.module.scss'
 
 import Image from 'next/image';
-import allCateIcon from '../../assets/icons/all-categories.svg'
+// import allCateIcon from 'svgs/all-categories.svg'
 
 function NavBar() {
   return (
@@ -11,7 +11,7 @@ function NavBar() {
       <div>
       <Link href="" className={style['all-categories']}>
         <div>
-          <Image src={allCateIcon} alt='' />
+          <Image src={'svgs/all-categories.svg'} alt='' width='26' height='20'/>
         </div>
         All Categories</Link>
       <Link href="">Furnitures</Link>

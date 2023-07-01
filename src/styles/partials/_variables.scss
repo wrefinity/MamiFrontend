@@ -1,12 +1,15 @@
 $pryClr: #305C45;
 $secClr: #E6A960;
 $mami-black: #313638;
+$mami-black1: #939393;
 $mami-hover-bold: #1D3729;
-$mami-gray: #939393;
-$mami-background: #F4FAF7;
+$mami-background: #F9F9F9;
 $secondary-background: #F1F1F1;
 $text-black: #000000;
-$white: #ffffff;
+$white: #FFF;
+$white2: #E5E5E5F9;
+$gray1: #E5E5E5F9;
+
 $font-weights: (
     "regular": 400,
     "medium": 500,
@@ -23,6 +26,7 @@ $font-sizes: (
   "28": 1.75rem,
 );
 $spacings: (
+  "4": 0.25rem,
   "8": 0.5rem,
   "10": 0.625rem,
   "16": 1rem,
@@ -52,10 +56,12 @@ $radius: (
   "8": 8px,
 );
 
+  // border: 2px solid red;
 
 :export {
     // Export variables for JS
     pryClr: $pryClr;
     secClr: $secClr;
+    white: $white;
     mamiBlack: $mami-black;
 }

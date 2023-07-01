@@ -1,18 +1,54 @@
-@import "./partials/_variables";
-@import "./partials/_functions";
-@import "./partials/_mixins";
+@import "./partials/variables";
+@import "./partials/functions";
+@import "./partials/mixins";
 
-.main {
-    @include flexSpaceBetween(column);
-    align-items: center;
-    padding: 6rem;
-    color: $pryClr;
 
-    h1{
-        font-size: large;
-        font-weight: weight(regular);
+.navBar{
+    background: $secClr;
+    padding: 2rem 5rem;
+    text-align: center;
+}
+
+.mamiQuality{
+    border-top: 0.6px solid $mami-black1;
+    border-bottom: 0.6px solid $mami-black1;
+    padding: 2rem 4rem;
+
+    .qualities{
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+
+        .quality{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+
+            .qualityImageBg{
+                border-radius: 8px;
+                background: #F1F1F1F1;
+                padding: 1rem 1.2rem;
+
+                .qualityImage{
+                    position: relative;
+                    width: 3rem;
+                    aspect-ratio: 1/1;
+                }
+            }
+
+            h3{
+                font-size: 1.2rem;
+                font-weight: weight(medium);
+                color: $pryClr;
+            }
+
+        }
     }
 
+    @include tablet{
+        display: none;
+    }
 }
 
 .container-fluid{

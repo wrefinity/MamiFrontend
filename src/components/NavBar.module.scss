@@ -2,11 +2,16 @@
 @import '../styles/partials/mixins';
 
 .navbar{
+  background-color: $white;
+  color: $mami-black1;
+  border-top: 0.5px solid $mami-black1;
+  border-bottom: 0.5px solid $mami-black1;
+  padding: map-get($spacings, '10');
 
   // $pryClr
   // $mami-black
   & > div {
-    max-width: 90%;
+    max-width: 85%;
     margin-inline: auto;
     color: $mami-black;
 

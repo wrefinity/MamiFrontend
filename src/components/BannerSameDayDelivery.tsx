@@ -2,10 +2,10 @@ import React from 'react'
 import style from './BannerSameDayDelivery.module.scss'
 
 import Image from 'next/image'
-import bag from '../../assets/img/bag.png'
-import shoe from '../../assets/img/half shoe 1.png'
-import deliveryIcon from '../../assets/icons/delivery-icon.svg'
-import arrowIcon from '../../assets/icons/arrow-right.svg'
+// import bag from '/images/bag.png'
+// import shoe from '/images/half shoe 1.png'
+// import deliveryIcon from '/svgs/delivery-icon.svg'
+// import arrowIcon from '/svgs/arrow-right.svg'
 
 
 function BannerSameDayDelivery() {
@@ -14,7 +14,7 @@ function BannerSameDayDelivery() {
       <div>        
         <div className={style['delivery-container']} rel="fast delivery">
           <div>
-            <Image className='w-100' src={deliveryIcon} alt="delivery"/>
+            <Image className='w-100' src={'/svgs/delivery-icon.svg'} alt="delivery" width='39' height='34' />
           </div>
           <span>Same day<br/> delivery</span>
         </div>
@@ -22,20 +22,24 @@ function BannerSameDayDelivery() {
         <div className={style['shoe']}>
           <Image
             className='w-100'
-            src={shoe}
-            alt="nigerian made shoe"/>
+            src={'/images/half shoe 1.png'}
+            alt="nigerian made shoe"
+            width='211' height='96' />
         </div>
         <h2>QUALITY NIGERIAN-MADE PRODUCTS YOU CAN TRUST</h2>
 
         <div className={style['bag']}>
           <Image
             className='w-100'
-            src={bag}
-            alt="nigerian made bag"/>
+            src={'/images/bag.png'}
+            alt="nigerian made bag"
+            width='189' height='96' />
         </div>
 
         <div>
-          <button className={style['shop-container']}>Shop now <div><Image className='w-100' src={arrowIcon} alt="shop button" /></div></button>
+          <button className={style['shop-container']}>Shop now
+            <div><Image className='w-100' src={'/svgs/arrow-right.svg'} alt="shop button" width='24' height='21' /></div>
+          </button>
         </div>
       </div>
 

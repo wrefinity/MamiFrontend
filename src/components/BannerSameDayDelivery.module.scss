@@ -3,14 +3,14 @@
 
 .delivery-banner{
   background-color: $secClr;
-  background-image: url(../../assets/img/Star-1.png);
+  background-image: url(/images/Star-1.png);
   background-repeat: no-repeat;
   background-size: 530px;
   background-position: 50% 1px;
 
   color: $white; 
   & > div{
-    max-width: 90%;
+    max-width: 85%;
     margin: 0 auto;
 
     @include flexAlign(row, space-between, center);
@@ -26,7 +26,7 @@
   font-size: map-get($font-sizes, '18');
 
   div {
-    width: 45px;
+    width: 38px;
   }
 }
 .shop-container{
@@ -46,5 +46,5 @@
   width: 160px;
 }
 .bag {
-  width: 150px;
+  width: 145px;
 }

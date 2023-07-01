@@ -1,15 +1,17 @@
-@import "./partials/_reset";
-@import "./partials/_variables";
-// @import "./partials/utilities";
+@import "./partials/reset";
+@import "./partials/variables";
+@import "./partials/utilities";
 
-@import "./partials/_functions";
-@import "./partials/_mixins";
+@import "./partials/functions";
+@import "./partials/mixins";
 
-.sidebar{
-    background: $mami-black;
-    padding: 3rem;
-    color: $secClr;
-    height: 100vh;
+
+body{
+    background: $mami-background;
+
+    @include mobile{
+        background: $white;
+    }
 }
 
 .rounded-8 {
@@ -30,3 +32,17 @@
 .outline-it{
     outline: 2px solid red
 }
+// Generic ClassNames
+
+
+.responsiveSection-m{
+    margin: 26px 110px;
+    @include tablet {
+        margin: 28px;
+    }
+
+    @include mobile{
+        margin: .8rem;
+    }
+}
+
