@@ -5,12 +5,19 @@ import ProductsContainer from '@/components/ProductsContainer'
 import FlashSalesContainer from '@/components/FlashSalesContainer'
 import TopCategories from '@/components/CategoriesContainer'
 
+import BannerSameDayDelivery from '@/components/BannerSameDayDelivery'
+import NavBar from '@/components/NavBar'
+import FilterBar from '@/components/FilterBar'
+import Header from '@/components/containers/Header'
+import Footer from '@/components/containers/Footer'
+
+
+
 export default function Home() {
   return (
     <>
-      <div className={styles.navBar}>
-        <h4>Work in Progress . . .</h4>
-      </div>
+      <Header/>      
+
       {/* Home Banner */}
       <section className='responsiveSection-m'>
         <HomeBanner />
@@ -76,6 +83,8 @@ export default function Home() {
       <section className='responsiveSection-m'>
         <ProductsContainer newArrivals cardTitle='New Arrivals' />
       </section>
+
+      <Footer/>
     </>
   )
 }

@@ -95,6 +95,12 @@ $utilities: (
     "prefix": "m-gap-y",
     "values": $spacings,
   ),
+  
+  
+  "displays": (
+    "prefix": "m",
+    "values": $displays,
+  ),
 );
 
 /* gen classes */

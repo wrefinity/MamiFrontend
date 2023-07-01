@@ -7,6 +7,9 @@ $mami-background: #F9F9F9;
 $secondary-background: #F1F1F1;
 $text-black: #000000;
 $white: #FFF;
+$white2: #E5E5E5F9;
+$gray1: #E5E5E5F9;
+
 $font-weights: (
     "regular": 400,
     "medium": 500,
@@ -15,15 +18,21 @@ $font-weights: (
 
 $font-sizes: (
   "12": 0.75rem,  // 9, 10
+  "14": 0.875rem,
   "16": 1rem,
   "18": 1.125rem,
   "24": 1.5rem,
+  "26": 1.625rem,
   "28": 1.75rem,
 );
 $spacings: (
+  "4": 0.25rem,
   "8": 0.5rem,
+  "10": 0.625rem,
   "16": 1rem,
+  "18": 1.125rem,
   "20": 1.25rem, // 4 gutters
+  "22": 1.375rem,
   "24": 1.5rem,
   "26": 1.625rem,
   "28": 1.75rem,
@@ -32,7 +41,22 @@ $spacings: (
 
   "110": 6.875rem, // 4 margin
 );
+$displays: (
+  "inline": inline,
+  "inline-block": inline-block,
+  "block": block,
+  "flex": flex,
+  "inline-flex": inline-flex,
+  "grid": grid,
+  "hidden": hidden
+);
+$radius: (
+  "2": 2px,
+  "6": 6px,
+  "8": 8px,
+);
 
+  // border: 2px solid red;
 
 :export {
     // Export variables for JS

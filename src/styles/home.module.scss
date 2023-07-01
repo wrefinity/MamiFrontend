@@ -50,3 +50,13 @@
         display: none;
     }
 }
+
+.container-fluid{
+    width: 100%;
+    overflow: hidden;
+}
+
+.page-header{
+    display: flex;
+    flex-direction: column;
+}

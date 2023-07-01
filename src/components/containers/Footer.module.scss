@@ -1,0 +1,138 @@
+@import '../../styles/partials/variables';
+@import '../../styles/partials/mixins';
+
+.footer{
+  
+  background-color: $pryClr;
+  margin-top: 10rem;
+
+  & img {
+    width: 100%;
+  }
+  
+  > div {
+    max-width: 85%;
+    margin-inline: auto;
+    color: $white;
+
+    @include flexAlign(column, initial, initial);
+  }
+}
+
+.subscribe{
+  margin-block: -4rem 3rem;
+  
+  * {
+    border-radius: map-get($radius, '8');
+  }
+  
+  > div {
+    background-color: $white;
+    color: $pryClr;
+    
+    max-width: 70%;
+    margin-inline: auto;
+    padding: map-get($spacings, '22');
+
+    @include flexAlign(initial, space-between, center);
+
+    > p {
+      font-size: map-get($font-sizes, '28' );
+      font-weight: map-get($font-weights, 'medium' );
+      line-height: 1.3em;
+      
+    }
+
+    > div{
+      flex-basis: 45%;
+      font-size: map-get($font-sizes, '18');
+      line-height: 1.2em;
+      @include flexAlign(initial, flex-end, center);
+
+    }
+    > div > input{
+      outline: none;
+      
+      flex-basis: 60%;
+      border: 1px solid $mami-black1;
+      padding: 0.55rem 14px;
+      margin-right: map-get($spacings, '16');
+    }
+    > div > button{
+      // line-height: .7em;
+      background-color: $pryClr;
+      color: $white;
+      padding: map-get($spacings, '10' ) map-get($spacings, '26');
+    }
+
+  }
+}
+
+.resource-links{
+  margin-bottom: 4rem;
+  > ul {
+    @include flexAlign(initial, space-between);
+
+    > li > h2 {
+      color: $white2;
+      font-size: map-get($font-sizes, '18');
+      font-weight: map-get($font-weights, 'medium' );
+      margin-bottom: .3rem;
+    }
+
+    > li > ul {
+    @include flexAlign(column);
+    gap: map-get($spacings, '4');
+
+    }
+    > li:first-of-type > ul {
+      // @include flexAlign(column);
+      gap: map-get($spacings, '10');
+  
+      }
+  }
+}
+
+.download-app{
+  @include flexAlign(initial, space-between, center);
+  gap: map-get($spacings, '10');
+  margin-top: 1.2rem;
+
+  > div{
+    flex-basis: 45%;
+  }
+
+  > div:first-of-type {
+    @include flexAlign(column, space-between);
+    gap: map-get($spacings, '10');
+
+    > div {
+      width: 176px;
+    }
+  }
+}
+
+
+.contact-links{
+  margin-bottom: 2rem;
+  @include flexAlign(initial, space-between, center);
+
+
+  & > div {
+    @include flexAlign(initial, initial, center);
+    gap: map-get($spacings, '16');
+  }
+  & > div:nth-of-type(2) {
+    gap: map-get($spacings, '8');
+  }
+
+}
+
+.email-link{
+  @include flexAlign();
+  gap: map-get($spacings, '10');
+
+  > div {
+    width: 20px;
+  }
+}

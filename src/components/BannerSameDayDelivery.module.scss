@@ -1,0 +1,50 @@
+@import '../styles/partials/variables';
+@import '../styles/partials/mixins';
+
+.delivery-banner{
+  background-color: $secClr;
+  background-image: url(/images/Star-1.png);
+  background-repeat: no-repeat;
+  background-size: 530px;
+  background-position: 50% 1px;
+
+  color: $white; 
+  & > div{
+    max-width: 85%;
+    margin: 0 auto;
+
+    @include flexAlign(row, space-between, center);
+  }
+  & h2 { 
+    font-size: map-get($font-sizes, '26');
+  }
+}
+
+.delivery-container{
+  @include flexAlign(initial, initial, center);
+  gap: map-get($spacings , '10');
+  font-size: map-get($font-sizes, '18');
+
+  div {
+    width: 38px;
+  }
+}
+.shop-container{
+  @include flexAlign(row, center, center);
+  gap: map-get($spacings , '10');
+  padding: 3px map-get($spacings , '20');
+
+  border: 1px solid $white;
+  border-radius: map-get($radius, "8");
+  font-size: map-get($font-sizes, '24' );
+
+  div {
+    width: 18px;
+  }
+}
+.shoe {
+  width: 160px;
+}
+.bag {
+  width: 145px;
+}
