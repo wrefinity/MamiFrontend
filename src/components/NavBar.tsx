@@ -7,13 +7,14 @@ import Image from 'next/image';
 
 function NavBar() {
   return (
+    <>
     <nav className={style['navbar']}>
       <div>
       <Link href="" className={style['all-categories']}>
         <div>
           <Image src={'svgs/all-categories.svg'} alt='' width='26' height='20'/>
         </div>
-        All Categories</Link>
+      All Categories</Link>
       <Link href="">Furnitures</Link>
       <Link href="">Phones</Link>
       <Link href="">Laptops</Link>
@@ -28,6 +29,42 @@ function NavBar() {
         
       </div>
     </nav>
+      
+    <nav className={style['navbar-mobile']}>
+      <div>
+      <Link href="">
+        <div>
+          <Image src={'/svgs/all-cate-mobile.svg'} alt='' width='26' height='20'/>
+        </div>
+      All</Link>
+
+      <Link href="">
+        <div>
+       <Image src={'/svgs/phone.svg'} alt='' width='26' height='20'/>
+        </div>
+      Phones</Link>
+
+      <Link href="">
+        <div>
+        <Image src={'/svgs/fashion.svg'} alt='' width='26' height='20'/>
+        </div>
+      Fashion</Link>
+
+      <Link href="">
+        <div>
+        <Image src={'/svgs/laptop.svg'} alt='' width='26' height='20'/>
+        </div>
+      Laptops</Link>
+
+      <Link href="">
+        <div>
+       <Image src={'/svgs/sell-tag.svg'} alt='' width='26' height='20'/>
+        </div>
+      Sell</Link>
+        
+      </div>
+    </nav>
+    </>
   );
 }
 

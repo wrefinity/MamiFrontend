@@ -16,9 +16,13 @@ function FilterBar() {
   return (
   <section className={style['search-bar']} rel="search bar">
     <div>
-      <div className={style.logo}>
-          <Image className='w-100' src={'/images/Mami_Logo-removebg-preview 1.png'} alt="MamiHub Brand logo" width='128' height='61' />
-          {/* fill style={{objectFit: "contain"}} */}
+        <div className={style.logo}>
+          <div>
+            <Image src={'svgs/all-categories.svg'} alt='' width='26' height='20'/>
+          </div>
+          <div>
+            <Image src={'/images/Mami_Logo-removebg-preview 1.png'} alt="MamiHub Brand logo" width='200' height='95' /> 
+          </div>
       </div>
         
       <div className={style.sell}>
@@ -27,6 +31,7 @@ function FilterBar() {
           <input type="text" placeholder='Search for products, stores and categories' />
           <button>
             <Image src={'/svgs/search.svg'} alt="" width='26' height='26' />
+            <Image src={'/svgs/search-black.svg'} alt="" width='26' height='26' />
           </button>
         </div>    
       </div>
@@ -45,13 +50,13 @@ function FilterBar() {
           <div>
             <Image className='w-100' src={'/svgs/Account Icon.svg'} alt="" width='12' height='18' />
           </div>
-          Account
+          <span>Account</span>
         </Link>
         <Link href=''>
           <div>
             <Image className='w-100' src={'/svgs/cart.svg'} alt="" width='20' height='20' />
           </div>
-          Cart
+          <span>Cart</span>
         </Link>
       </nav>
     </div>

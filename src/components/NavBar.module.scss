@@ -6,10 +6,13 @@
   color: $mami-black1;
   border-top: 0.5px solid $mami-black1;
   border-bottom: 0.5px solid $mami-black1;
-  padding: map-get($spacings, '10');
+  padding: map-get($spacings, '10') 5px;
 
-  // $pryClr
-  // $mami-black
+  font-size: map-get($font-sizes, '18');
+  @include mobile{
+    display: none;
+  }
+
   & > div {
     max-width: 85%;
     margin-inline: auto;
@@ -22,4 +25,31 @@
 .all-categories{
   display: flex;
   gap: map-get($spacings, "10");
+}
+
+.navbar-mobile{
+  color: $mami-black;
+
+  padding-bottom: 0.5rem;
+  font-size: map-get($font-sizes, '12');
+  @include desktop{
+    display: none;
+  }
+
+  & img{
+    width: 100%
+  }
+
+  & > div {
+    @include flexAlign(initial, space-between, center);
+    max-width: 93%;
+    margin-inline: auto;
+    padding-inline: .5rem;
+
+    color: $mami-black;
+    > a{
+      @include flexAlign(column, center, center);
+      gap: map-get($spacings, '6');
+    }
+  }
 }

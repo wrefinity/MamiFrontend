@@ -44,12 +44,19 @@
     overflow: hidden;
 }
 
+// 1000 - larger screens
+@mixin desktop{
+    @media screen and (min-width: 1000px) {
+        @content
+    }
+};
+// 500 - 1000 
 @mixin tablet{
     @media screen and (max-width: 1000px) {
         @content
     }
 };
-
+// 0 - 500
 @mixin mobile{
     @media screen and (max-width: 500px) {
         @content
