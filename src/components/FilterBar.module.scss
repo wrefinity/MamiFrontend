@@ -2,74 +2,135 @@
 @import '../styles/partials/mixins';
 
 .search-bar{
-
   background-color: $white;
+  padding-block: .2rem;
+
+  @include mobile{
+    padding-top: 1rem;
+    padding-bottom: 0.9rem;
+  }
   & > div {
     max-width: 85%;
     margin-inline: auto;
-    // line-height: 1px;
+    gap: map-get($spacings, '8'); 
 
     @include flexAlign(initial, space-between, center);  
     @include mobile {
-      background-color: red;
+      max-width: 93%;
+      flex-wrap:wrap;
     }
   }
-
   & img {
     width: 100%;
   }
+}
+.filter-nav {
+  @include flexAlign();
+  gap: map-get($spacings, '18' );
+  
+  font-size: map-get($font-sizes, '18' );
+  
+  @include mobile {
+    order: 2;
+    gap: map-get($spacings, '10');
+  }
 
-  .filter-nav {
-    @include flexAlign();
-    gap: map-get($spacings, '18' );
+  > * {
+    gap: map-get($spacings, '10');
+  }
+  > button{
+    @include flexAlign(initial, initial, center);
 
-    font-size: map-get($font-sizes, '18' );
-
-    img {
-      width: 100%;
+    > div {
+      width: 18px;
     }
-    > * {
-      gap: map-get($spacings, '10');
-    }
-    > button{
-      @include flexAlign(initial, initial, center);
 
-      > div {
-        width: 18px;
+    @include mobile {
+     display: none;
+    }
+  }
+  > a{
+    @include flexAlign(initial, initial, center);
+    > div{
+      width: 13px;
+      @include mobile{
+        width: 15px;
       }
     }
-    > a{
-      @include flexAlign(initial, initial, center);
-      > div{
-        width: 13px;
+    > span {
+      @include mobile{
+        display: none;
       }
     }
-    > a:nth-of-type(2) > div{
-      width: 16px;
+  }
+  > a:nth-of-type(2) > div{
+    width: 16px;
+    @include mobile{
+      width: 21px;
     }
   }
 }
 
 .logo{
   flex-basis: 14%;
+  @include flexAlign(initial, initial, center);
+  
+  @include mobile {
+    flex-basis: 50%;
+
+    gap: map-get($spacings, '8');
+  }
+  > div{
+    @include desktop{
+      // display: none;
+      flex-basis: 100%;
+    }
+  }
+
+  > div:first-of-type{
+    @include mobile{
+      // display: none;
+      flex-basis: 15%;
+    }
+    @include desktop{
+      display: none;
+    }
+  }
 }
+
 .sell{
   flex-basis: 55%;
   
   @include flexAlign(initial, space-between, center);
+
+  @include mobile {
+    flex-basis: 100%;
+    order: 3;
+  }
+
   > a{
     font-size: map-get($font-sizes, '14' );
+    color: $pryClr;
+    @include mobile {
+      display: none;
+    }
   }
 }
 .search-container{
   flex-basis: 82%;
+
   @include flexAlign(initial, initial, center);
   border-radius: map-get($radius, '6');
   border: 1.4px solid $mami-black1;
   background-color: $pryClr;
-  
 
-  input{
+  @include mobile {
+    flex-basis: 100%;
+    
+    background-color: transparent;
+  }
+
+  > input{
     flex-basis: 100%;
     border: 1px solid $mami-black1;
     padding: 0.55rem 14px;
@@ -80,11 +141,37 @@
     font-size: map-get($font-sizes, '18');
     line-height: 1.3em;
 
+    @include mobile{
+      font-size: map-get($font-sizes, '14');
+      border: none;
+    }
   }
-  button{
+  > button{
     padding: 0.45rem 1.4rem;
     border-top-right-radius: map-get($radius, '6');
     border-bottom-right-radius: map-get($radius, '6');
     background-color: $pryClr;
+    
+    @include mobile {
+      background-color: transparent;
+    }
+
+    > img:first-of-type {
+      @include desktop {
+        display: block;
+      }
+      @include mobile {
+        display: none;
+        
+      }
+    }
+    > img:nth-of-type(2) {
+      @include desktop {
+        display: none;
+      }
+      @include mobile {
+        display: block;
+      }
+    }
   }
 }

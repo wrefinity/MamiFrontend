@@ -8,11 +8,11 @@ function Footer() {
     <footer className={style.footer}>
       <div>
         <section className={style.subscribe}>
-          <div>
-            <p>
+          <div rel='newletter - latest deals'>
+            <h2>
             Get notifications of our latest deals<br />
             and offers direclty to your email.
-            </p>
+            </h2>
             <div>
               <input type="text" placeholder='Email address' />
               <button>Subscribe</button>
@@ -78,6 +78,28 @@ function Footer() {
                   </div>
                 </li>
               </ul>
+            </li>
+            
+          </ul>
+        </section>
+        <section className={style['resource-links-mobile']}>
+          <ul>
+            <li>
+              <ul>
+                <li>Home</li>
+                <li>Contact Us</li>
+                <li>Help Center</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>Privacy policy</li>
+                <li>Terms Of Use</li>
+                <li>FAQ</li>
+              </ul>
+            </li>
+            <li>
+                <div>Become a seller</div>
             </li>
             
           </ul>

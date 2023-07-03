@@ -2,10 +2,6 @@ import React from 'react'
 import style from './BannerSameDayDelivery.module.scss'
 
 import Image from 'next/image'
-// import bag from '/images/bag.png'
-// import shoe from '/images/half shoe 1.png'
-// import deliveryIcon from '/svgs/delivery-icon.svg'
-// import arrowIcon from '/svgs/arrow-right.svg'
 
 
 function BannerSameDayDelivery() {
@@ -37,12 +33,11 @@ function BannerSameDayDelivery() {
         </div>
 
         <div>
-          <button className={style['shop-container']}>Shop now
+          <button className={style['shop-btn']}>Shop now
             <div><Image className='w-100' src={'/svgs/arrow-right.svg'} alt="shop button" width='24' height='21' /></div>
           </button>
         </div>
       </div>
-
     </section>
   )
 }

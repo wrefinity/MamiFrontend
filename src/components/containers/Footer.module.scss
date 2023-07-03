@@ -14,6 +14,9 @@
     max-width: 85%;
     margin-inline: auto;
     color: $white;
+    @include mobile {
+      max-width: 93%;
+    }
 
     @include flexAlign(column, initial, initial);
   }
@@ -21,12 +24,17 @@
 
 .subscribe{
   margin-block: -4rem 3rem;
+  @include mobile {
+    display: none;
+  }
   
   * {
     border-radius: map-get($radius, '8');
   }
   
   > div {
+
+    
     background-color: $white;
     color: $pryClr;
     
@@ -36,10 +44,10 @@
 
     @include flexAlign(initial, space-between, center);
 
-    > p {
+    > h2 {
       font-size: map-get($font-sizes, '28' );
       font-weight: map-get($font-weights, 'medium' );
-      line-height: 1.3em;
+      line-height: 1.3em;    
       
     }
 
@@ -70,8 +78,13 @@
 
 .resource-links{
   margin-bottom: 4rem;
+  @include mobile {
+    display: none
+  }
+
   > ul {
     @include flexAlign(initial, space-between);
+    flex-wrap: wrap;
 
     > li > h2 {
       color: $white2;
@@ -112,10 +125,41 @@
   }
 }
 
+.resource-links-mobile{
+  @include desktop {
+    display: none;
+  }
+  @include mobile {
+    display: block;
+  }
+
+  font-size: map-get($font-sizes, '12');
+  margin-top: 2rem;
+
+  > ul {
+    @include flexAlign(initial, space-between);
+    > li > ul {
+      @include flexAlign(column);
+      gap: map-get($spacings, '6');
+  
+    }
+
+  }
+
+  
+}
+
 
 .contact-links{
   margin-bottom: 2rem;
   @include flexAlign(initial, space-between, center);
+
+  @include mobile {
+    @include flexAlign(initial, center, center);
+    border-top: 1px solid $mami-black1;
+    margin-block: 1rem .4rem;
+    padding-top: .5rem;
+  }
 
 
   & > div {
@@ -124,7 +168,26 @@
   }
   & > div:nth-of-type(2) {
     gap: map-get($spacings, '8');
+
+    @include mobile {
+      font-size: map-get($font-sizes, '12' );
+    }
+
   }
+  
+
+  & > div:nth-of-type(1) {
+    @include mobile {
+      display: none;
+    }
+  }
+  & > div:nth-of-type(3) {
+    @include mobile {
+      display: none;
+    } 
+  }
+
+
 
 }
 
