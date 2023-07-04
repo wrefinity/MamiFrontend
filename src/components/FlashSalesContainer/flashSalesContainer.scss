@@ -17,7 +17,8 @@
         .cardHead {
             border-bottom: 0.6px solid #939393;
             padding: 1rem 2rem;
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             justify-content: space-between;
             margin-bottom: 2rem;
             align-items: center;
@@ -26,10 +27,11 @@
                 color: $mami-black;
                 font-weight: weight(medium);
                 font-size: 1.5rem;
-                background: linear-gradient(#EE2929, #3F903A);
+                background: linear-gradient(to right, #EE2929, #3F903A);
                 -webkit-text-fill-color: transparent;
                 -webkit-background-clip: text;
                 background-clip: text;
+                align-self: self-start;
 
                 @include mobile(){
                     font-size: .8rem;
@@ -39,6 +41,7 @@
             h3{
                 font-size: 1.4rem;
                 font-weight: weight(medium);
+                justify-self: center;
 
                 @include mobile(){
                     font-size: .8rem;
@@ -47,6 +50,7 @@
 
             p{
                 min-width: 3.3rem;
+                justify-self: right;
             }
 
             @include mobile(){

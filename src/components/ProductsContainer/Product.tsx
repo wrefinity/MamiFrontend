@@ -1,13 +1,16 @@
 import React from 'react'
 import Image from "next/image"
+import "./product.scss"
 
 function Product({imageUrl, name, amount} : {imageUrl: string, name: string, amount: number}) {
 
-let formatting_options = {
-   style: "currency",
-   currency: "NGN",
-   minimumFractionDigits: 2,
-}
+// let formatting_options = {
+//    style: "currency",
+//   //  currency: "NGN",
+//    minimumFractionDigits: 0,
+// }
+
+const f = new Intl.NumberFormat("en-us")
  
   return (
     <div className="product">
@@ -16,7 +19,7 @@ let formatting_options = {
         </div>
         <div className="productDetails">
             <h4>{name}</h4>
-            <h3>{amount.toLocaleString( 'en-US', formatting_options )}</h3>
+            <h3>₦ {f.format(amount)}</h3>
         </div>
     </div>
   )

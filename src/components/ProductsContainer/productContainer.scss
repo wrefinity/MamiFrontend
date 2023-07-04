@@ -28,48 +28,29 @@
         }
     }
 
+    .blackCulture{
+        background: url("/images/backgrounds/black-culture.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $white !important;
+
+        h3{
+            color: $white !important;
+        }
+        
+        @include mobile(){
+            background: url("/images/backgrounds/black-culture.png") !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+
+        }
+    }
+
     .products{
         padding: 1rem 0 1rem 2rem;
         @include flexScrollX;
 
-        .product{
-            min-width: 11rem;
-            border-radius: 8px;
-            overflow: hidden;
-            background-color: $mami-background;
-            
-            .productImageContainer{
-                @include nextImageContainer;
-                width: 100%;
-                aspect-ratio: 1/1;
-            }
-            
-            .productDetails{
-                padding: 1rem;
-
-                h3{
-                    font-weight: weight(medium);
-
-                    @include mobile{
-                        font-size: 1rem;
-                    }
-                }
-
-                h4{
-                    @include mobile{
-                        font-size: .7rem;
-                    }
-                }
-
-                @include mobile{
-                    padding: 1rem;
-                }
-            }
-
-            @include mobile{
-                min-width: 8rem;
-            }
-        }
+        // product styles in product.scss
 
         @include mobile{
             padding: .4rem;

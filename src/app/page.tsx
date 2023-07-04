@@ -10,6 +10,8 @@ import NavBar from '@/components/NavBar'
 import FilterBar from '@/components/FilterBar'
 import Header from '@/components/containers/Header'
 import Footer from '@/components/containers/Footer'
+import PromotionBanner from '@/components/Banners/PromotionBanner'
+import HotComboBanner from '@/components/Banners/hotComboBanner'
 
 
 
@@ -82,6 +84,45 @@ export default function Home() {
       {/* New Arrivals */}
       <section className='responsiveSection-m'>
         <ProductsContainer newArrivals cardTitle='New Arrivals' />
+      </section>
+
+      <section className="responsiveSection-m">
+        <PromotionBanner />
+      </section>
+
+      {/* Big Discounts */}
+      <section className='responsiveSection-m'>
+        <ProductsContainer cardTitle='Big discounts' />
+      </section>
+
+      {/* Black Culture */}
+      <section className='responsiveSection-m'>
+        <ProductsContainer cardTitle='Black culture' blackCulture />
+      </section>
+
+      {/* Appliances */}
+      <section className='responsiveSection-m'>
+        <ProductsContainer cardTitle='Appliances' />
+      </section>
+
+      {/* Hot Combo Banner */}
+      <section className='responsiveSection-m'>
+        <HotComboBanner />
+      </section>
+
+      {/* Fashion Deals */}
+      <section className='responsiveSection-m'>
+        <ProductsContainer cardTitle='Fashion Deals' />
+      </section>
+
+      {/* Featured Offers */}
+      <section className='responsiveSection-m'>
+        <ProductsContainer cardTitle='Featured Offers' />
+      </section>
+
+      {/* Made in Aba */}
+      <section className='responsiveSection-m'>
+        <ProductsContainer cardTitle='Made in Aba' />
       </section>
 
       <Footer/>
