@@ -11,10 +11,10 @@ const products = [
         {name: "Vintage T-shirts", imageUrl: "/images/product6.png", amount: 5500}
     ]
 
-function ProductsContainer({cardTitle, newArrivals} : {cardTitle: string, newArrivals?: boolean}) {
+function ProductsContainer({cardTitle, newArrivals, blackCulture} : {cardTitle: string, newArrivals?: boolean, blackCulture?: boolean}) {
   return (
     <div className='container'>
-      <div className="cardHead">
+      <div className={blackCulture ? "blackCulture cardHead" : "cardHead"}>
         <h3>{cardTitle}</h3>
         <p>See all &#8250;</p>
       </div>
