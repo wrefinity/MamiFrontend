@@ -5,7 +5,7 @@
   background-color: $white;
   padding-block: .2rem;
 
-  @include mobile{
+  @include tablet{
     padding-top: 1rem;
     padding-bottom: 0.9rem;
   }
@@ -15,7 +15,7 @@
     gap: map-get($spacings, '8'); 
 
     @include flexAlign(initial, space-between, center);  
-    @include mobile {
+    @include tablet {
       max-width: 93%;
       flex-wrap:wrap;
     }
@@ -30,13 +30,18 @@
   
   font-size: map-get($font-sizes, '18' );
   
-  @include mobile {
+  @include tablet {
     order: 2;
     gap: map-get($spacings, '10');
   }
 
   > * {
     gap: map-get($spacings, '10');
+    padding: .2rem .35rem;
+    border-radius: map-get($radius, '8');
+  }
+  > *:hover {
+    background-color: $secondary-background;
   }
   > button{
     @include flexAlign(initial, initial, center);
@@ -53,7 +58,7 @@
     @include flexAlign(initial, initial, center);
     > div{
       width: 13px;
-      @include mobile{
+      @include tablet{
         width: 15px;
       }
     }
@@ -65,7 +70,7 @@
   }
   > a:nth-of-type(2) > div{
     width: 16px;
-    @include mobile{
+    @include tablet{
       width: 21px;
     }
   }
@@ -75,21 +80,22 @@
   flex-basis: 14%;
   @include flexAlign(initial, initial, center);
   
-  @include mobile {
+  @include tablet {
     flex-basis: 50%;
 
     gap: map-get($spacings, '8');
   }
   > div{
     @include desktop{
-      // display: none;
       flex-basis: 100%;
     }
   }
-
+  
   > div:first-of-type{
+    @include tablet{
+      flex-basis: 9%;
+    }
     @include mobile{
-      // display: none;
       flex-basis: 15%;
     }
     @include desktop{
@@ -103,7 +109,7 @@
   
   @include flexAlign(initial, space-between, center);
 
-  @include mobile {
+  @include tablet {
     flex-basis: 100%;
     order: 3;
   }
@@ -111,7 +117,7 @@
   > a{
     font-size: map-get($font-sizes, '14' );
     color: $pryClr;
-    @include mobile {
+    @include tablet {
       display: none;
     }
   }
@@ -124,7 +130,7 @@
   border: 1.4px solid $mami-black1;
   background-color: $pryClr;
 
-  @include mobile {
+  @include tablet {
     flex-basis: 100%;
     
     background-color: transparent;
@@ -141,7 +147,7 @@
     font-size: map-get($font-sizes, '18');
     line-height: 1.3em;
 
-    @include mobile{
+    @include tablet{
       font-size: map-get($font-sizes, '14');
       border: none;
     }
@@ -152,7 +158,9 @@
     border-bottom-right-radius: map-get($radius, '6');
     background-color: $pryClr;
     
-    @include mobile {
+    border: none;    
+    outline: none;    
+    @include tablet {
       background-color: transparent;
     }
 
@@ -160,7 +168,7 @@
       @include desktop {
         display: block;
       }
-      @include mobile {
+      @include tablet {
         display: none;
         
       }
@@ -169,7 +177,7 @@
       @include desktop {
         display: none;
       }
-      @include mobile {
+      @include tablet {
         display: block;
       }
     }
