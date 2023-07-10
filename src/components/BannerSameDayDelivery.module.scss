@@ -1,83 +1,128 @@
 @import '../styles/partials/variables';
 @import '../styles/partials/mixins';
 
-.delivery-banner{
-  background-color: $secClr;
-  background-image: url(/images/Star-1.png);
+// .delivery-banner{
+//   background-color: $secClr;
+//   background-image: url(/images/Star-1.png);
+//   background-repeat: no-repeat;
+//   background-size: 530px;
+//   background-position: 50% 1px;
+
+//   color: $white;
+//   @include mobile {
+//     background-size: 150px;
+//   }
+//   & > div{
+//     max-width: 85%;
+//     margin: 0 auto;
+//     @include mobile {
+//       max-width: 90%;
+//     }
+
+//     @include flexAlign(row, space-between, center);
+//   }
+//   & h2 { 
+//     font-size: map-get($font-sizes, '26');
+//     @include mobile {
+//       font-size: calc(map-get($font-sizes, '6') + .23px);
+//     }
+//   }
+// }
+
+// .delivery-container{
+//   @include flexAlign(initial, initial, center);
+//   gap: map-get($spacings , '10');
+//   font-size: map-get($font-sizes, '18');
+
+//   @include mobile {
+//     gap: calc(map-get($spacings , '2') + .88px);
+//     font-size: calc(map-get($font-sizes, '4') + .31px);
+//   }
+
+//   div {
+//     width: 38px;
+//     @include mobile {
+//       width: 12px;
+//     }
+//   }
+// }
+// .shop-btn{
+//   @include flexAlign(row, center, center);
+//   gap: map-get($spacings , '10');
+//   padding: 3px map-get($spacings , '20');
+
+//   border: 1px solid $white;
+//   border-radius: map-get($radius, "8");
+//   font-size: map-get($font-sizes, '24' );
+//   line-height: 1.2em;
+//   @include mobile {
+//     font-size: calc(map-get($font-sizes, '5') + .75px);
+//     border-radius: map-get($radius, "2");
+//     padding: map-get($spacings , '2') map-get($spacings , '5');
+//   }
+  
+//   div {
+//     width: 18px;
+//     @include mobile {
+//       width: 5px;
+
+//     }
+//   }
+// }
+// .shoe {
+//   width: 160px;
+//   @include mobile {
+//     width: 47px;
+//   }
+// }
+// .bag {
+//   width: 145px;
+//   @include mobile {
+//     width: 45px;
+//   }
+// }
+
+.home-banner{
+  background-image: url(/images/top-banner.png);
   background-repeat: no-repeat;
-  background-size: 530px;
-  background-position: 50% 1px;
+  background-position: center;
+  background-size: cover;
 
-  color: $white;
-  @include mobile {
-    background-size: 150px;
-  }
-  & > div{
-    max-width: 85%;
-    margin: 0 auto;
-    @include mobile {
-      max-width: 90%;
-    }
+  color: rgba(0, 0, 0, 0);
+  user-select: none;
 
-    @include flexAlign(row, space-between, center);
-  }
-  & h2 { 
-    font-size: map-get($font-sizes, '26');
-    @include mobile {
-      font-size: calc(map-get($font-sizes, '6') + .23px);
+  @include  flexAlign();
+  min-height: 12vh;
+
+  @include tablet {
+    background-size: cover;
+    min-height: 57px;
+
+    > h2{
+      max-width: 0;
+      max-height: 0;
+      overflow: hidden;
     }
   }
-}
-
-.delivery-container{
-  @include flexAlign(initial, initial, center);
-  gap: map-get($spacings , '10');
-  font-size: map-get($font-sizes, '18');
-
-  @include mobile {
-    gap: calc(map-get($spacings , '2') + .88px);
-    font-size: calc(map-get($font-sizes, '4') + .31px);
-  }
-
-  div {
-    width: 38px;
-    @include mobile {
-      width: 12px;
-    }
-  }
-}
-.shop-btn{
-  @include flexAlign(row, center, center);
-  gap: map-get($spacings , '10');
-  padding: 3px map-get($spacings , '20');
-
-  border: 1px solid $white;
-  border-radius: map-get($radius, "8");
-  font-size: map-get($font-sizes, '24' );
-  line-height: 1.2em;
-  @include mobile {
-    font-size: calc(map-get($font-sizes, '5') + .75px);
-    border-radius: map-get($radius, "2");
-    padding: map-get($spacings , '2') map-get($spacings , '5');
+  @include mobile { //378px
+    background-size: 100% 31px;
+    min-height: 4.02dvh;
   }
   
-  div {
-    width: 18px;
-    @include mobile {
-      width: 5px;
+  > button{
+    align-self: center;
+    margin-inline: auto 5.3rem;
+    padding: 0.7rem 2.5rem;
+
+    @include tablet {
+    padding: 0.2rem 1.2rem;
+    margin-right: 4.2rem;
 
     }
-  }
-}
-.shoe {
-  width: 160px;
-  @include mobile {
-    width: 47px;
-  }
-}
-.bag {
-  width: 145px;
-  @include mobile {
-    width: 45px;
+    @include mobile{
+    padding-inline: .5rem;
+    margin-right: 1.8rem;
+    font-size: map-get($font-sizes, '6' );
+    }
   }
 }

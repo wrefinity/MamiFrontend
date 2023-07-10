@@ -3,12 +3,6 @@ import style from '@/components/FilterBar.module.scss'
 import Link from 'next/link'
 
 import Image from 'next/image'
-// import mamiLogo from '/images/Mami_Logo-removebg-preview 1.png'
-// import searchIcon from '/svgs/search.svg'
-// import help from '/svgs/help-support.svg'
-// import angleDown from '/svgs/down-angle.svg'
-// import account from '/svgs/Account Icon.svg'
-// import cart from '/svgs/cart.svg'
 
 
 
@@ -16,13 +10,13 @@ function FilterBar() {
   return (
   <section className={style['search-bar']} rel="search bar">
     <div>
-        <div className={style.logo}>
-          <div>
-            <Image src={'svgs/all-categories.svg'} alt='' width='26' height='20'/>
-          </div>
-          <div>
-            <Image src={'/images/Mami_Logo-removebg-preview 1.png'} alt="MamiHub Brand logo" width='200' height='95' /> 
-          </div>
+      <div className={style.logo}>
+        <div>
+          <Image src={'svgs/all-categories.svg'} alt='' width='26' height='20'/>
+        </div>
+        <div>
+          <Image src={'/images/Mami_Logo-removebg-preview 1.png'} alt="MamiHub Brand logo" width='200' height='95' /> 
+        </div>
       </div>
         
       <div className={style.sell}>

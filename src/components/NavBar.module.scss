@@ -8,8 +8,8 @@
   border-bottom: 0.5px solid $mami-black1;
   padding: map-get($spacings, '10') 5px;
 
-  font-size: map-get($font-sizes, '18');
-  @include mobile{
+  font-size: map-get($font-sizes, '16');
+  @include tablet{
     display: none;
   }
 
@@ -18,8 +18,7 @@
     margin-inline: auto;
     color: $mami-black;
 
-    @include flexAlign(initial, space-between, initial)
-
+    @include flexAlign(initial, space-between, initial);
   }
 }
 .all-categories{
