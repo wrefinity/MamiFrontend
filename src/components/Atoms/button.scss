@@ -1,0 +1,22 @@
+@import "@/styles/partials/variables";
+@import "@/styles/partials/functions";
+@import "@/styles/partials/mixins";
+
+button{
+    outline: none;
+    border: 1px solid $white;
+    padding: .4rem .7rem;
+    color: $white;
+    border-radius: 5px;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    min-width: fit-content;
+
+    .svgContainer{
+        position: relative;
+        height: 1rem;
+        width: 1rem;
+    }
+}

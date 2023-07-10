@@ -1,0 +1,55 @@
+@import "@/styles/partials/variables";
+@import "@/styles/partials/functions";
+@import "@/styles/partials/mixins";
+
+.promotionBannerContainer{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    background-color: $pryClr;
+    border-radius: 8px;
+    padding: 2rem 2rem 0;
+    align-items: center;
+
+    .promotionDetails{
+        display: flex;
+        color: $white;
+        flex-direction: column;
+        gap: .6rem;
+        position: relative;
+
+        h1{
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 1;
+            overflow: hidden;
+
+            @include mobile{
+                font-size: 2rem;
+            }
+        }
+
+        .bannerImageContainer{
+            position: relative;
+            width: 60%;
+            aspect-ratio: 16/9;
+
+            @include mobile{
+                display: none
+            }
+        }
+
+        
+    }
+
+    .promotionScroll{
+        @include flexScrollX;
+        padding: 0 1rem 1rem 0;
+        border-radius: 4px;
+    }
+
+    @include mobile(){
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
