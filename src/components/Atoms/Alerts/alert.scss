@@ -1,0 +1,22 @@
+@import "@/styles/partials/reset";
+@import "@/styles/partials/variables";
+@import "@/styles/partials/utilities";
+
+@import "@/styles/partials/functions";
+@import "@/styles/partials/mixins";
+
+.successAlertContainer{
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: 2px solid $pryClr;
+    border-radius: 8px;
+    margin: 1.5rem;
+    background: rgba(249, 249, 249, 0.98);
+
+    .iconContainer{
+        position: relative;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}

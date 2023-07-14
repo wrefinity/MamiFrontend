@@ -1,0 +1,25 @@
+@import "@/styles/partials/variables";
+@import "@/styles/partials/utilities";
+
+@import "@/styles/partials/functions";
+@import "@/styles/partials/mixins";
+
+button{
+    display: flex;
+    padding: .7rem;
+    gap: 1.4rem;
+    border: 1px solid $mami-black1;
+    outline: none;
+    margin: 1rem 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+
+    .authLogo{
+        position: relative;
+        width: 1.2rem;
+        height: 1.2rem;
+        overflow: hidden;
+    }
+}

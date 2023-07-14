@@ -1,0 +1,8 @@
+@import "@/styles/partials/variables";
+@import "@/styles/partials/functions";
+@import "@/styles/partials/mixins";
+
+.mamiImage{
+    object-fit: contain;
+    object-position: center;
+}

@@ -33,7 +33,20 @@ body{
     outline: 2px solid red
 }
 // Generic ClassNames
+.underline{
+    text-decoration-line: underline;
+}
 
+.col-2{
+    display: flex;
+    gap: 1rem;
+
+    
+    @include mobile{
+        flex-direction: column;
+        gap: 0rem;
+    }
+}
 
 .responsiveSection-m{
     margin: 26px 110px;
@@ -45,4 +58,3 @@ body{
         margin: .8rem;
     }
 }
-

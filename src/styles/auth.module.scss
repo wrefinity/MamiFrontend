@@ -1,0 +1,71 @@
+@import "./partials/variables";
+@import "./partials/functions";
+@import "./partials/mixins";
+
+.authLayout{
+    background: rgba(48, 92, 69, 0.96);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.authContainer{
+    background: $white;
+    padding: 2rem 3rem;
+    max-width: 40rem;
+    border-radius: 8px;
+    
+
+    .authDesc{
+        text-align: center;
+
+        .logo{
+            position: relative;
+            width: 10rem;
+            height: 5rem;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        p{
+            max-width: 25rem;
+            margin: auto;
+            font-weight: weiight(medium);
+            font-size: 1.125rem;          
+        }
+    }
+
+    form{
+        margin: 3rem 0;
+
+        p{
+            text-align: right;
+            cursor: pointer;
+            font-size: 1.125rem;
+            
+        }
+    }
+
+    .orDiv{
+        width: 100%;
+        height: 0.025rem;
+        background: $mami-black1;
+        position: relative;
+        margin-bottom: 2rem;
+
+        p{
+            position: absolute;
+            right: 50%;
+            translate: 50% 0;
+            top: -1.3rem;
+            background: $white;
+            padding: .5rem;
+        }
+    }
+
+    @include mobile(){
+        padding: 1.5rem;
+    }
+}
