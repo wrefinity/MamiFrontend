@@ -25,7 +25,7 @@ function Login() {
 
   const onSubmit = (e : React.MouseEvent<HTMLElement>) => {
     e.preventDefault()
-    setClicked(false)
+    setClicked(true)
     const userObj = {
       email: user, password
     }
