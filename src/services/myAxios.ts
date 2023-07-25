@@ -1,12 +1,14 @@
 import { BASE_URL } from "@/lib/constants";
+import { useAppSelector } from "@/redux/hooks";
 import axios, { AxiosRequestConfig } from "axios";
 
 
 // to prevent overwriting the global axios config
+const {auth} = useAppSelector(state => state)
 
 const axiosConfig : AxiosRequestConfig = {
   headers:  {
-    "Authorization": "Bearer dkjaldkfja dfkljad flkajdf"
+    "Authorization": `Bearer ${auth.token}`
   },
   baseURL: BASE_URL
 };
