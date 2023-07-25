@@ -16,7 +16,7 @@ const unAuthenticatedRoute = (Component: React.FC, options?: {path: string}) => 
     const token = auth.token
     useEffect(() => {
 
-      auth.isLoggedIn && token && jwt.verify(token, process.env.NEXT_PUBLIC_JWT_SECRET as string, (err, decoded)=>{
+      auth.isLoggedIn && token && jwt.verify(token, process.env.NEXT_PUBLIC_JWT_SECRET, (err, decoded)=>{
         if(err?.name === "TokenExpiredError"){
           return false
 
