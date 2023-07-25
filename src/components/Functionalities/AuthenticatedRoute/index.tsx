@@ -27,7 +27,7 @@ const authenticatedRoute = (Component: React.FC, options?: {path: string}) => {
         router.push("/auth/login")
       }else{
         try{
-          const payload = jwt.verify(token, process.env.NEXT_PUBLIC_JWT_SECRET) as JwtPayload
+          const payload = jwt.verify(token, process.env.NEXT_PUBLIC_JWT_SECRET as string) as JwtPayload
           if(auth.isLoggedIn){
             setAuthenticated(true)
             const generatedToken = generateToken(payload.id)
