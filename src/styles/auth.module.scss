@@ -40,7 +40,7 @@
     form{
         margin: 3rem 0;
 
-        p{
+        .pRight{
             text-align: right;
             cursor: pointer;
             font-size: 1.125rem;
@@ -67,5 +67,24 @@
 
     @include mobile(){
         padding: 1.5rem;
+    }
+}
+
+.formGroup{
+    margin: 0 1.5rem;
+
+    @include mobile(){
+        margin: 0 .5rem;
+    }
+}
+
+.formActionText {
+    color: $mami-black1;
+    text-align: center !important;
+    cursor: default !important;
+
+    span {
+        color: $pryClr;
+        font-weight: weight(medium);
     }
 }

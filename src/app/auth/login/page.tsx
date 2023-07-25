@@ -8,15 +8,40 @@ import PrimarySubmitBtn from "@/components/Atoms/FormComponents/PrimarySubmitBtn
 import AuthOption from '@/components/AuthOptions'
 import AuthWrapper from '@/components/Wrapper/AuthWrapper'
 import Link from "next/link"
+import unAuthenticatedRoute from '@/components/Functionalities/UnAuthenticatedRoute'
+import myAxios from '@/services/myAxios'
+import { toast } from 'sonner'
+import { useAppDispatch } from '@/redux/hooks'
+import { addUserInfo, login } from '@/redux/slices/authSlice'
+import { useRouter } from 'next/navigation'
 
 function Login() {
   const [user, setUser] = useState("")
   const [password, setPassword] = useState("")
   const [clicked, setClicked] = useState(false)
 
+  const dispatch = useAppDispatch()
+  const router = useRouter()
+
   const onSubmit = () => {
     setClicked(false)
     console.log('Signing in')
+    const userObj = {
+      user, password
+    }
+    myAxios.post("/user/login", userObj)
+      .then((response) => {
+        console.log(response.data)
+        toast.success(response.data.message)
+        dispatch(login(response.data?.data))
+        setClicked(false)
+        router.push("/user")
+      })
+      .catch(err=>{
+        toast.error(err.response?.data?.message)
+        console.log(err.response?.data?.message)
+        setClicked(false)
+      })
   }
 
   return (
@@ -25,7 +50,7 @@ function Login() {
         <form>
           <TextField placeholder={"Email address or phone number"} type={"text"} value={user} onchange={(e)=>setUser(e.target.value)} />
           <TextField placeholder={"Enter your password"} type={"password"} value={password} onchange={(e)=>setPassword(e.target.value)} />
-          <p>Forgot password?</p>
+          <p className={styles.pRight}>Forgot password?</p>
   
           <PrimarySubmitBtn text={"Sign in"} loading={clicked} action={onSubmit} />
           
@@ -44,4 +69,4 @@ function Login() {
   )
 }
 
-export default Login
+export default unAuthenticatedRoute(Login)
