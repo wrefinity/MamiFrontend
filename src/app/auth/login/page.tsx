@@ -23,7 +23,8 @@ function Login() {
   const dispatch = useAppDispatch()
   const router = useRouter()
 
-  const onSubmit = () => {
+  const onSubmit = (e : React.MouseEvent<HTMLElement>) => {
+    e.preventDefault()
     setClicked(false)
     const userObj = {
       user, password
