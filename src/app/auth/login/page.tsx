@@ -27,7 +27,7 @@ function Login() {
     e.preventDefault()
     setClicked(false)
     const userObj = {
-      user, password
+      email: user, password
     }
     myAxios.post("/user/login", userObj)
       .then((response) => {
