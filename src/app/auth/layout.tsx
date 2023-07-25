@@ -1,3 +1,4 @@
+import { Providers } from "@/redux/Providers"
 import styles from "@/styles/auth.module.scss"
 
 export const metadata = {
@@ -12,9 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <div className={styles.authLayout}>
-        {children}
-      </div>
+      <Providers>
+        <div className={styles.authLayout}>
+          {children}
+        </div>
+      </Providers>
       </>
   )
 }

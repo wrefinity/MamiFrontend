@@ -10,6 +10,12 @@ import CheckboxInput from '@/components/Atoms/FormComponents/CheckboxInput'
 import AuthWrapper from '@/components/Wrapper/AuthWrapper'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import unAuthenticatedRoute from '@/components/Functionalities/UnAuthenticatedRoute'
+import myAxios from '@/services/myAxios'
+import { toast, Toaster } from "sonner"
+import GoBack from '@/components/Atoms/FormComponents/GoBack'
+import { useAppDispatch } from '@/redux/hooks'
+import { addUserInfo } from '@/redux/slices/authSlice'
 
 function Register() {
   const [email, setEmail] = useState("")
@@ -23,19 +29,34 @@ function Register() {
   const [agreeTerms, setAgreeTerms] = useState('')
 
   const router = useRouter()
+  const dispatch = useAppDispatch()
 
 
   const onSubmit = (e : React.MouseEvent<HTMLElement>) => {
     e.preventDefault()
-    setClicked(false)
-    console.log('Signing up')
-    router.push("/auth/registered")
+    setClicked(true)
+    const user = {
+      firstName, lastName, email, password
+    }
+    myAxios.post("/user/register", user)
+      .then((response) => {
+        toast.success(response.data.message)
+        dispatch(addUserInfo(response.data?.data))
+        setClicked(false)
+        router.push("/auth/verify")
+      })
+      .catch(err=>{
+        toast.error(err.response?.data?.message)
+        setClicked(false)
+      })
+    // router.push("/auth/registered")
 
   }
 
   return (
     <AuthWrapper description={<p>Welcome to MamiHub. Create an account or <Link href="/auth/login"><span className="underline">Log in</span></Link> if you already have an account</p>}>
       <>
+        {nextPage && <GoBack action={()=>setNextPage(false)}/>}
         <form>
           { !nextPage && (
               <>
@@ -48,6 +69,7 @@ function Register() {
           }
           { nextPage && (
               <>
+                
                 <div className='col-2'>
                   <TextField placeholder={"Enter First Name"} type={"text"} value={firstName} onchange={(e)=>setFirstName(e.target.value)} />
                   <TextField placeholder={"Enter Last Name"} type={"text"} value={lastName} onchange={(e)=>setLastName(e.target.value)} />
@@ -69,4 +91,4 @@ function Register() {
   )
 }
 
-export default Register
+export default unAuthenticatedRoute(Register)
