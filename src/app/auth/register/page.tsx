@@ -35,13 +35,11 @@ function Register() {
   const onSubmit = (e : React.MouseEvent<HTMLElement>) => {
     e.preventDefault()
     setClicked(true)
-    console.log('Signing up')
     const user = {
       firstName, lastName, email, password
     }
     myAxios.post("/user/register", user)
       .then((response) => {
-        console.log(response.data)
         toast.success(response.data.message)
         dispatch(addUserInfo(response.data?.data))
         setClicked(false)
@@ -49,7 +47,6 @@ function Register() {
       })
       .catch(err=>{
         toast.error(err.response?.data?.message)
-        console.log(err.response?.data?.message)
         setClicked(false)
       })
     // router.push("/auth/registered")

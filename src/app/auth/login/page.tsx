@@ -25,13 +25,11 @@ function Login() {
 
   const onSubmit = () => {
     setClicked(false)
-    console.log('Signing in')
     const userObj = {
       user, password
     }
     myAxios.post("/user/login", userObj)
       .then((response) => {
-        console.log(response.data)
         toast.success(response.data.message)
         dispatch(login(response.data?.data))
         setClicked(false)
@@ -39,7 +37,6 @@ function Login() {
       })
       .catch(err=>{
         toast.error(err.response?.data?.message)
-        console.log(err.response?.data?.message)
         setClicked(false)
       })
   }

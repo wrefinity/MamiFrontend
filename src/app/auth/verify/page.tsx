@@ -24,23 +24,21 @@ function Verify() {
 
   const handleVerify = (e : React.MouseEvent<HTMLElement>) => {
     e.preventDefault()
-    console.log(auth)
     setClicked(true)
     const code = {
       code: otp,
       user: auth.userInfo?._id
     }
 
+
     myAxios.post("/code/verify", code)
       .then((response) => {
-        console.log(response.data)
         toast.success(response.data.message)
         setClicked(false)
         router.push("/auth/login")
       })
       .catch(err=>{
         toast.error(err.response?.data?.message)
-        console.log(err.response?.data?.message)
         setClicked(false)
       })
   }
@@ -55,14 +53,12 @@ function Verify() {
 
     myAxios.post("/code/resend", code)
       .then((response) => {
-        console.log(response.data)
         toast.success(response.data.message)
         setClicked(false)
         // router.push("/auth/login")
       })
       .catch(err=>{
         toast.error(err.response?.data?.message)
-        console.log(err.response?.data?.message)
         setClicked(false)
       })
   }
@@ -75,7 +71,7 @@ function Verify() {
         <AuthSuccessAlert message={`We have sent a six digit verification code to your email ${auth.userInfo?.login ? auth.userInfo?.login : ""}`}/>
         <div className={styles.formGroup}>
           <p className="greyText" style={{textAlign: "center", padding: "1rem"}}>Enter verification code to complete your sign up.</p>
-          {otp}
+
           <form style={{marginTop: "1rem"}}>
             <OtpInput
               value={otp}
